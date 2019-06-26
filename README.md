@@ -39,7 +39,7 @@ Either patch `yelp` or remove it.
 ### Patching yelp
 
 * Install patch: `sudo apt install patch`
-* Execute `sudo patch /usr/local/bin/yelp yelp.patch`
+* Patch yelp script: `sudo patch /usr/local/bin/yelp yelp.patch`
 
 ### Removing yelp and its associated URI handlers
 
