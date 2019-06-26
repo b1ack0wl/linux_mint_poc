@@ -2,7 +2,7 @@
 ## Root cause
 The URI handlers `help://`, `ghelp://`, and `man://` are defined in the file `/usr/share/applications/yelp.desktop` which will execute `/usr/local/bin/yelp` via `Exec=yelp %u` whenever one of those URI handlers is invoked.
 
-The file `/usr/local/bin/yelp` is a simple python script that parses the incoming URI handler request. This script first searches for the substring "gnome-help" or "ubuntu-help", and if it doesn't find those substrings then it'll execute `/usr/local/bin/yelp` without wrapping the argument in quotes.
+The file `/usr/local/bin/yelp` is a simple python script that parses the incoming URI handler request. This script first searches for the substrings **"gnome-help"** and **"ubuntu-help"**, and if it doesn't find either one of those substrings then it'll execute `/usr/local/bin/yelp` without wrapping the argument in quotes.
 
 Contents of `/usr/local/bin/yelp`:
 ```
