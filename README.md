@@ -25,7 +25,7 @@ else:
 
 ## From PoC to Shell
 
-Exploitation took a little bit of creativity since Google Chrome URI encodes the space **\x20** character, curly brackets **{}**, the plus **+** character, the backtick character **\`**, and some others. Since `${IFS}` wouldn't work it was discovered that using `$IFS$()` works just as well since the `$()` statement prevents from the `$IFS` environment variable from concatenating with other ASCII characters and accidentally becoming `$IFSaddedword` or so.
+Exploitation took a little bit of creativity since Google Chrome URI encodes the space **\x20** character, curly brackets **{}**, the plus **+** character, the backtick character **\`**, and some others. Since `${IFS}` wouldn't work it was discovered that using `$IFS$()` works just as well since the `$()` statement prevents the `$IFS` environment variable from concatenating with other ASCII characters and accidentally becoming `$IFSaddedword` or so.
 
 # Mitigations
 ## Overview
