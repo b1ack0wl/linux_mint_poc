@@ -1,4 +1,4 @@
-# Linux Mint 18.3-19.1 'yelp' bug
+# Linux Mint 18.3-19.1 'yelp' command injection vuln
 ## Root cause
 The URI handlers `help://`, `ghelp://`, and `man://` are defined in the file `/usr/share/applications/yelp.desktop` which will execute `/usr/local/bin/yelp` via `Exec=yelp %u` whenever one of those URI handlers is invoked.
 
