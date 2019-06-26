@@ -1,0 +1,18 @@
+--- ./yelp.original     2019-06-25 16:56:30.936697821 -0500
++++ ./yelp.modified     2019-06-25 17:09:32.225753618 -0500
+@@ -2,6 +2,7 @@
+
+ import os
+ import sys
++from shlex import quote
+
+ if (len(sys.argv) > 1):
+     args = ' '.join(sys.argv[1:])
+@@ -10,6 +11,6 @@
+     elif ('ubuntu-help' in args) and not os.path.exists('/usr/share/help/C/ubuntu-help'):
+         os.system ("xdg-open http://www.linuxmint.com/documentation.php &")
+     else:
+-        os.system ("/usr/bin/yelp %s" % args)
++        os.system ("/usr/bin/yelp %s" % quote(args))
+ else:
+     os.system ('/usr/bin/yelp')
